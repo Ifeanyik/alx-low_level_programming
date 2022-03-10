@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc compiler.c -co compiler.o
+gcc main.c -co main.o
