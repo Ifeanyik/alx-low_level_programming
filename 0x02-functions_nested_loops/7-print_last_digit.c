@@ -8,7 +8,7 @@
 
 int print_last_digit(int a)
 {
-	char m = a % 10;
+	const void m = a % 10;
 	write(1, m, 1);
 	return (m);
 }
