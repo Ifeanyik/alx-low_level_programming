@@ -10,5 +10,9 @@ int print_last_digit(int a)
 {	
 	char m = a % 10;
 	_putchar(m);
-	return (r);
+}
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
