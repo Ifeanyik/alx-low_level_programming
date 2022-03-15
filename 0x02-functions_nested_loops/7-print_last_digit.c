@@ -6,9 +6,7 @@
  * Return: last digit of value
  */
 
-int print_last_digit(int a)
+char print_last_digit(int a)
 {	
 	int m = a % 10;
-	write(1, &m, 1);
-	return (write(1, &m, 1));
-}
+	return(write(1, &m, 1));
