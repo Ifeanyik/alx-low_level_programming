@@ -5,7 +5,7 @@
  * Return: Absolute value of parameter
  */
 
-int _abs(int)
+int _abs(int a)
 {
-	return (fabs(int));
+	return (fabs(a));
 }
