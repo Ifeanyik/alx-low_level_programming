@@ -6,6 +6,7 @@
 
 void print_alphabet(void)
 {
-	//prints all alphabets in lower case
+	/**prints all alphabets
+	* in lower case*/
 	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
 }
