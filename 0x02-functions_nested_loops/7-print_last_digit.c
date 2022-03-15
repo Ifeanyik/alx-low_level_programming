@@ -8,6 +8,8 @@
 
 int print_last_digit(int a)
 {
+	r;
+	
 	int  m = a % 10;
 	r = m;
 	write(1, r, 1);
