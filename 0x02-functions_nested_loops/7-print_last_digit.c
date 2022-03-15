@@ -10,3 +10,4 @@ char print_last_digit(int a)
 {	
 	int m = a % 10;
 	return(write(1, &m, 1));
+}
