@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	fprintf(stdout, "_putchar");
+	write(1, "_putchar", 9);
 	return (0);
 }
