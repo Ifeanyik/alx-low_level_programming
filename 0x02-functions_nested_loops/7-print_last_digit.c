@@ -7,11 +7,9 @@
  */
 
 int print_last_digit(int a)
-{
-	r;
-	
+{	
 	int  m = a % 10;
-	r = m;
+	char r[15] = m;
 	write(1, r, 1);
 	return (r);
 }
