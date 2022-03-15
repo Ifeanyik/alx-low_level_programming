@@ -9,7 +9,7 @@
 int print_last_digit(int a)
 {
 	int  m = a % 10;
-	char r = m
+	char r = m;
 	write(1, r, 1);
 	return (r);
 }
