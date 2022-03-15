@@ -1,5 +1,5 @@
 #include <unistd.h>
-
+#include "main.h"
 /**
  * print_last_digit - prints last digit
  * @a: parameter to be passed
@@ -9,10 +9,6 @@
 int print_last_digit(int a)
 {	
 	char m = a % 10;
-	_putchar(m);
-}
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
+	write(1, &m, 1);
+	return (int m);
 }
