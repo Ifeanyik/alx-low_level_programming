@@ -8,8 +8,7 @@
 
 int print_last_digit(int a)
 {	
-	int  m = a % 10;
-	char r[15] = m;
-	write(1, r, 1);
+	char m = a % 10;
+	_putchar(m);
 	return (r);
 }
