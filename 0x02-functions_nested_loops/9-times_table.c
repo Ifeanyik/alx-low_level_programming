@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main"
 
 /**
  * times_table -Prints 9 times table
