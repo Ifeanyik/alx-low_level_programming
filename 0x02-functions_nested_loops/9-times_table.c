@@ -13,7 +13,6 @@ void times_table(void)
 		while (count <= 9)
 		{
 			write(1, &a, 3);
-			write(1, ", ", 2);
 			count += 1;
 			a += j;
 		}
