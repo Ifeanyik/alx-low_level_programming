@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - Betty's annoying
+ * print_alphabet - Betty's annoying
  * Return: Always 0
  */
 
