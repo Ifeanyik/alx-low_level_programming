@@ -6,6 +6,12 @@
 
 void print_alphabet(void)
 {
-	/**prints all alphabets in lower case */
-	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
+	char letter = 'a';
+
+	while (letter <= 'z')
+	{
+		_putchar(letter);
+		letter++;
+	}
+	_putchar('\n');
 }

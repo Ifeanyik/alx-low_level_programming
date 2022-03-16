@@ -1,21 +1,22 @@
-#include <unistd.h>
 #include "main.h"
+
 /**
- * print_last_digit - prints last digit
- * @a: parameter to be passed
- * Return: last digit of value
+ * print_last_digit - prints the last digit of a number
+ * @n: n is an integer
+ *
+ * Description: prints the last digit of a number
+ *
+ * Return: integer
  */
-int putchar(char c;)
 
-int print_last_digit(int a)
-{	
-	int m = a % 10;
-	write(1, &m, 1);
-	putchar(m + '0');
-	return (m);
-}
-
-int putchar(char c)
+int print_last_digit(int n)
 {
-	return(write(1, &c, 1));
+	int last = n % 10;
+
+	if (n < 0)
+		last = last * -1;
+
+	_putchar(last + '0');
+
+	return (last);
 }
