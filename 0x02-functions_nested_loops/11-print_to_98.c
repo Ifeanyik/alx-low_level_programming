@@ -4,7 +4,9 @@
 /**
  *print_to_98 - prints numbers to 98
  *n@: starting parameter
+ *
  *Description: prints all natural numbers from n to 98
+ *
  *Return: void
  */
 
