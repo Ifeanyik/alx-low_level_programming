@@ -1,11 +1,20 @@
+#include "main.h"
 /**
- * _puts - function
- * @str: parameter of char type
- * Description: Prints a given string
+ *_puts - prints string followed by newline.
+ *@str: pointer to string.
+ *
+ *Return: void.
  */
-#include <unistd.h>
-
 void _puts(char *str)
 {
-	write(1, "I do not fear computers. I fear the lack of them - Isaac Asimov", 64);
+	int i;
+
+	i = 0;
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		i++;
+		str++;
+	}
+	_putchar('\n');
 }
