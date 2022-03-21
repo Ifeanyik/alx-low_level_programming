@@ -1,4 +1,4 @@
-int reset_to_98(int *a)
+void reset_to_98(int *a)
 {
    int *p;
 
