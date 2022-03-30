@@ -18,7 +18,7 @@ void _puts_recursion(char *s)
  * size - gets size of string given
  * @a: string parameter
  * @count: integer parameter
- * return count
+ * Return: count
  */
 
 int size(char *a, int count)
