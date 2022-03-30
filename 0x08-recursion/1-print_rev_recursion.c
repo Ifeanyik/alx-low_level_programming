@@ -26,3 +26,18 @@ void reverse(int size, char *arr)
 	if (size != 0)
 		reverse(--size, arr);
 }
+
+/**
+ * size - gets size of given character
+ * @a: character type parameter
+ * @count: integer type parameter
+ * Return: integer
+ */
+
+int size(char *a, int count)
+{
+	if (a[count] == '\0')
+	return (count);
+
+	return(size(a, ++count));
+}
