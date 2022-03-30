@@ -7,3 +7,4 @@ int factorial(int n);
 int fact(int n);
 int _pow_recursion(int x, int y);
 int power(int x, int y, int x_init);
+void reverse(int size, char *arr);
