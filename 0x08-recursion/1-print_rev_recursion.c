@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * _print_rev_recursion - prints given string in reverse
  * @s: character type parameter
@@ -25,7 +25,7 @@ void _print_rev_recursion(char *s)
  * Return: void
  */
 
-int arr_adder(char array[], char old_array[], int size, int count)
+void arr_adder(char array[], char old_array[], int size, int count)
 {
 	if (size < 0)
 		return (0);
