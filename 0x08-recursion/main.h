@@ -5,3 +5,5 @@ int arr_adder(char array [], char old_array[], int size, int count);
 int _strlen_recursion(char *s);
 int factorial(int n);
 int fact(int n);
+int _pow_recursion(int x, int y);
+int power(int x, int y, int x_init);
