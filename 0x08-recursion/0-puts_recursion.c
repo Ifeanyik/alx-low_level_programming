@@ -8,23 +8,23 @@
 
 void _puts_recursion(char *s)
 {
-    int s_size = size(s, 0);
+	int s_size = size(s, 0);
 
-    write(1, s, s_size);
-    write(1, "\n", 1);
+	write(1, s, s_size);
+	write(1, "\n", 1);
 }
 
 /**
- * _size - gets size of string given
+ * size - gets size of string given
  * @a: string parameter
  * @count: integer parameter
- * Returns count
+ * return count
  */
 
 int size(char *a, int count)
 {
-    if (a[count] == '\0')
-        return (count);
+	if (a[count] == '\0')
+		return (count);
 
-    return (size(a, ++count));
+	return (size(a, ++count));
 }
