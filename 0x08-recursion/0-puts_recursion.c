@@ -18,3 +18,18 @@ void _puts_recursion(char *s)
     write(1, s, s_size);
     write(1, "\n", 1);
 }
+
+/**
+ * _size - gets size of string given
+ * @a: string parameter
+ * @count: integer parameter
+ * Returns count
+ */
+
+int size(char *a, int count)
+{
+    if (a[count] == '\0')
+        return (count);
+
+    size(a, ++count);
+}
