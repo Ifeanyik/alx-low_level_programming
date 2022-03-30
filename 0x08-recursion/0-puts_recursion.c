@@ -26,5 +26,5 @@ int size(char *a, int count)
     if (a[count] == '\0')
         return (count);
 
-    size(a, ++count);
+    return (size(a, ++count));
 }
