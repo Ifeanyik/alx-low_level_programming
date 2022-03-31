@@ -11,7 +11,7 @@ void _print_rev_recursion(char *s)
 {
 	int s_size = size(s, 0);
 	if (s_size == 0)
-		write(1, "\n", 1);
+		write(1, "", 1);
 	else
 		reverse (--s_size, s);
 }
