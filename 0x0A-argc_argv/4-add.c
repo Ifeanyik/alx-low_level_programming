@@ -1,34 +1,43 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <stdlib.h>
+
 
 /**
- * main - prints sum of integers
- * @argc: number of arguments
- * @argv: array of given arguments
- * Return: 0 if successful else 1
+ * main - Adds positive numbers
+ * @argc: size of *argv
+ * @argv: array of strings
+ * Return: 0 on success, 1 on error
  */
-
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, flag = 0, sum = 0;
 
-	if (argc < 2)
+	if (argc <= 1)
 	{
 		printf("0\n");
 		return (0);
 	}
+
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i]))
+		j = 0;
+		while (argv[i][j] != '\0')
 		{
-			sum += atoi(argv[i]);
+			if (!isdigit(argv[i][j]))
+			{
+				flag = 1;
+			}
+			j++;
 		}
-		else
+		if (flag)
 		{
 			printf("Error\n");
 			return (1);
 		}
+		sum += atoi(argv[i]);
 	}
+	printf("%d\n", sum);
+
 	return (0);
 }
