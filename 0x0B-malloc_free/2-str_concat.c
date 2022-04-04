@@ -27,6 +27,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int size_s1, size_s2, sum;
 	char *arr;
+	int i = 0, j = 0;
 
 	if (s1 == NULL)
 		size_s1 = 0;
@@ -42,7 +43,6 @@ char *str_concat(char *s1, char *s2)
 		sum = size_s1;
 	else
 		return (NULL);
-	int i = 0, j = 0;
 
 	arr = malloc(sum * sizeof(char));
 
