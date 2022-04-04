@@ -41,6 +41,8 @@ char *str_concat(char *s1, char *s2)
 		sum = size_s2;
 	else if (s1 != NULL && s2 == NULL)
 		sum = size_s1;
+	else if (s1 && s2 != NULL)
+		sum = size_s1 + size_s2;
 	else
 		return (NULL);
 
