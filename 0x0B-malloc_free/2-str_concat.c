@@ -50,16 +50,24 @@ char *str_concat(char *s1, char *s2)
 
 	if (arr == NULL)
 		return (NULL);
-	while (s1[i] != '\0')
+	if (s1 != NULL)
 	{
-		arr[i] = s1[i];
-		i++;
+		while (s1[i] != '\0')
+		{
+			arr[i] = s1[i];
+			i++;
+		}
 	}
-	while (s2[j] != '\0')
-	{
-		arr[i] = s2[j];
-		i++;
-		j++;
+	if (s2 != NULL)
+	{		
+		while (s2[j] != '\0')
+		{
+			arr[i] = s2[j];
+			i++;
+			j++;
+			if (s2[j] == '\0')
+				arr[i] = '\0';
+		}
 	}
 	return (arr);
 }
