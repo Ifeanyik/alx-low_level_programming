@@ -25,9 +25,22 @@ int size(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	int size_s1 = size(s1);
-	int size_s2 = size(s2);
-	int sum = size_s1 + size_s2;
+	int size_s1, size_s2, sum;
+
+	if (s1 == NULL)
+		size_s1 = 0;
+	else
+		size_s1 = size(s1);
+	if (s2 == NULL)
+		size_s2 = 0;
+	else
+		size_s2 = size(s2);
+	if (s1 == NULL && s2 != NULL)
+		sum = size_s2;
+	else if (s1 != NULL && s2 == NULL)
+		sum = size_s1;
+	else
+		return (NULL);
 	char *arr;
 	int i = 0, j = 0;
 
