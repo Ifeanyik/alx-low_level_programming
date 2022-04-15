@@ -20,9 +20,9 @@ void print_all(const char * const format, ...)
 	while (format[f])
 	{
 		t = 0;
-		while (type[t])
+		while (types[t])
 		{
-			if (format[f] == type_arr[t] && c)
+			if (format[f] == types[t] && c)
 			{
 				printf(", ");
 				break;
@@ -40,11 +40,11 @@ void print_all(const char * const format, ...)
 				c = 1;
 				break;
 			case 'f':
-				printf("%d", va_arg(me, float));
+				printf("%f", va_arg(me, double));
 				c = 1;
 				break;
 			case 's':
-			str = va_arg(valist, char *), c = 1;
+			str = va_arg(me, char *), c = 1;
 			if (!str)
 			{
 				printf("(nil)");
