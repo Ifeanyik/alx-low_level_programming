@@ -15,8 +15,6 @@ size_t list_len(const list_t *h)
 	{
 		if (h->len && h->str)
 			ele_num++;
-		else if (h->len)
-			ele_num++;
 		h = h->next;
 	}
 	return (ele_num);
