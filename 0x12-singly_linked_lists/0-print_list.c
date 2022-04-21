@@ -1,4 +1,5 @@
-//Written by Kasim Ifeanyi
+#include "lists.h"
+#include <stdio.h>
 
 /**
  * print_list - prints elements of list
