@@ -13,8 +13,7 @@ size_t list_len(const list_t *h)
 
 	while (h)
 	{
-		if (h->len && h->str)
-			ele_num++;
+		ele_num++;
 		h = h->next;
 	}
 	return (ele_num);
