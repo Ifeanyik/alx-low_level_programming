@@ -2,7 +2,6 @@
 #include "lists.h"
 
 /**
- * Written by Kasim Ifeanyi
  * listint_len - gets number of nodes
  * @h: pointer to nodes
  * Return: number of nodes

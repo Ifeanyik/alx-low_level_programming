@@ -3,7 +3,6 @@
 #include <stddef.h>
 
 /**
- * Written by Kasim Ifeanyi
  * print_listint - prints list elements
  * @h: pointer to list
  * Return: number of nodes
@@ -19,6 +18,5 @@ size_t print_listint(const listint_t *h)
 		h = h->next;
 		node_num++;
 	}
-	
 	return (node_num);
 }

@@ -2,10 +2,6 @@
 #include <stdlib.h>
 
 /**
- * Written by Kasim Ifeanyi
- */
-
-/**
  * add_nodeint - adds node at list beginning
  * @head: pointer to list beginning
  * @n: element to add
