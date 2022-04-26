@@ -10,15 +10,16 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *addr_keep;
-	listint_t *h = *head;
+	listint_t *h;
 
-	if (!h)
-		return;
-	while (h)
+	if (head != NULL)
 	{
-		addr_keep = h->next;
-		free(h);
-		h = addr_keep;
+		h = *head;
+		while ((addr_keep = h) != NULL)
+		{
+			h = h->next;
+			free(addr_keep);
+		}
+		*head = NULL;
 	}
-	*head = NULL;
 }
