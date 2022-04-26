@@ -12,6 +12,8 @@ void free_listint2(listint_t **head)
 	listint_t *addr_keep;
 	listint_t *h = *head;
 
+	if (!h)
+		return (NULL);
 	while (h)
 	{
 		addr_keep = h->next;
