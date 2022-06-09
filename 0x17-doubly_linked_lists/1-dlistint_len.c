@@ -2,18 +2,17 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints elements in list
- * @h: pointer to list head
+ * dlistint_len - gets number of list elements
+ * @h: pointer to header
  * Return: number of list elements
  */
 
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	size_t count;
 
 	for (count = 0; h; count++)
 	{
-		printf("%d\n", h->n);
 		h = h->next;
 	}
 	return (count);
