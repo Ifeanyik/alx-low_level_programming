@@ -10,13 +10,13 @@
 
 size_t dlistint_len(const dlistint_t *h)
 {
-        size_t count;
+	size_t count;
 
-        for (count = 0; h; count++)
-        {
-                h = h->next;
-        }
-        return (count);
+	for (count = 0; h; count++)
+	{
+		h = h->next;
+	}
+	return (count);
 }
 
 /**
@@ -34,7 +34,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	end = malloc(sizeof(dlistint_t));
 	h = *head;
 	if (!end)
-		return NULL;
+		return (NULL);
 	if (!h)
 	{
 		*head = end;
