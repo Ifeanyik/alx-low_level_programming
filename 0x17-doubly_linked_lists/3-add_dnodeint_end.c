@@ -3,23 +3,6 @@
 #include "lists.h"
 
 /**
- * dlistint_len - gets number of list elements
- * @h: pointer to header
- * Return: number of list elements
- */
-
-size_t dlistint_len(const dlistint_t *h)
-{
-	size_t count;
-
-	for (count = 0; h; count++)
-	{
-		h = h->next;
-	}
-	return (count);
-}
-
-/**
  * add_dnodeint_end - add node at list end
  * @head: pointer to head node
  * @n: Node element to be added
@@ -28,32 +11,32 @@ size_t dlistint_len(const dlistint_t *h)
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *end, *h, *second_to_last;
-	size_t length, i;
+	dlistint_t *end, *h;
 
-	end = malloc(sizeof(dlistint_t));
 	h = *head;
-	if (!end)
-		return (NULL);
-	if (!h)
+	if (h)
 	{
-		*head = end;
+		for (; h->next;)
+			h = h->next;
+		end = malloc(sizeof(dlistint_t));
+		if (!end)
+			return (NULL);
+		end->prev = h;
 		end->n = n;
 		end->next = NULL;
-		end->prev = NULL;
+		h->next = end;
 		return (end);
-
 	}
-	length = dlistint_len(h);
-	for (i = 1; h->next; i++)
+	else
 	{
-		if (i == length)
-			second_to_last = h;
-		h = h->next;
+		end = malloc(sizeof(dlistint_t));
+		if (!end)
+			return (NULL);
+		end->n = n;
+		end->prev = NULL;
+		end->next = NULL;
+		*head = end;
+		return (end);
 	}
-	h->next = end;
-	end->n = n;
-	end->next = NULL;
-	end->prev = second_to_last;
-	return (end);
+	return (NULL);
 }
