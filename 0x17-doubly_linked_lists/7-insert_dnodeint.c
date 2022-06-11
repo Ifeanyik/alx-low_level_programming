@@ -2,6 +2,14 @@
 #include <stddef.h>
 #include "lists.h"
 
+/**
+ * insert_dnodeint_at_index - insets node at index
+ * @h: pointer to header
+ * @idx: index
+ * @n: list element
+ * Return: new node address
+ */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int length;
