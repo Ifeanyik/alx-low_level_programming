@@ -48,6 +48,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
  * @former_el: address of current element at index
  * @new_node: address of new nodw
  * @h: address of original header node
+ * @n: element
  * Return: address of new element
  */
 
