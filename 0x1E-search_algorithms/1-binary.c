@@ -1,74 +1,61 @@
 #include "search_algos.h"
 
 /**
- * print_array - prints array being searched
- * @array: pointer to first array element
- * @index: index of current first array element
- * @size: current index of last element in array
- * Return: never
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
+ *
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
-void print_array(int *array, int index, int size)
+int recursive_search(int *array, size_t size, int value)
 {
-	printf("Searching in array: ");
-	for (; index < size; index++, array++)
-	{
-		printf("%d", *array);
-		(index < size - 1) ? printf(", ") : printf("\n");
-	}
+	size_t half = size / 2;
+	size_t i;
+
+	if (array == NULL || size == 0)
+		return (-1);
+
+	printf("Searching in array");
+
+	for (i = 0; i < size; i++)
+		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
+
+	printf("\n");
+
+	if (half && size % 2 == 0)
+		half--;
+
+	if (value == array[half])
+		return ((int)half);
+
+	if (value < array[half])
+		return (recursive_search(array, half, value));
+
+	half++;
+
+	return (recursive_search(array + half, size - half, value) + half);
 }
 
 /**
- * binary_search - perform binary search on a sorted array
- * @array: pointer to first array element
- * @size: size of array
- * @value: value to be found in array
- * Return: index of value if found or -1
+ * binary_search - calls to binary_search to return
+ * the index of the number
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
 int binary_search(int *array, size_t size, int value)
 {
-	size_t index, middle, count, first_index;
-	int *temp_pointer, *middle_pointer;
+	int index;
 
-	if (!(*array) && (*array != 0))
+	index = recursive_search(array, size, value);
+
+	if (index >= 0 && array[index] != value)
 		return (-1);
-	for (index = 0; index < size; )
-	{
-		first_index = index;
-		print_array(array, index, size);
-		middle = (index + (size - 1)) / 2;
-		middle_pointer = array;
-		for (count = index; count < middle; count++, middle_pointer++)
-		if (*middle_pointer < value)
-		{
-			temp_pointer = middle_pointer;
-			++temp_pointer;
-			if ((++first_index - middle) == 1)
-			{
-				if (value == *temp_pointer)
-					return (middle + 1);
-				else
-					return (-1);
-			}
-			index = ++middle;
-			array = ++middle_pointer;
-		}
-		else if (*middle_pointer > value)
-		{
-			temp_pointer = middle_pointer;
-			--temp_pointer;
-			if ((middle - first_index) == 1)
-			{
-				if (value == *temp_pointer)
-					return (middle - 1);
-				else
-					return (-1);
-			}
-			size = middle;
-		}
-		else
-			return (middle);
-	}
-	return (-1);
+
+	return (index);
 }
